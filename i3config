@@ -195,6 +195,7 @@ bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 bindsym $mod+p exec "xrandr --output eDP1 --off && xrandr --output DP1 --auto"
+bindsym $mod+o exec "xrandr --output eDP1 --auto"
 bindsym Control+Print exec gnome-screenshot -i
 
 # Media player controls

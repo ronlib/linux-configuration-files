@@ -196,7 +196,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 bindsym $mod+p exec "xrandr --output eDP1 --off && xrandr --output DP1 --auto"
 bindsym $mod+o exec "xrandr --output eDP1 --auto"
-bindsym Control+Print exec gnome-screenshot -i
+bindsym Control+Print exec python /home/ron/git/linux-configuration-files/screen.py
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -205,3 +205,5 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 for_window [class="Yad"] floating enable
+
+hide_edge_borders both

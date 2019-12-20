@@ -181,8 +181,10 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         font pango:DejaVu Sans, FontAwesome 11
-        # status_command i3blocks -c ~/.config/i3blocks/config
-        status_command SCRIPT_DIR=~/.config/i3blocks 2>/tmp/i3blocks.err i3blocks -vvv -c ~/.config/i3blocks/config | tee /tmp/i3blocks.out
+        # status_command i3blocks #-c ~/.config/i3blocks/config
+        # status_command SCRIPT_DIR=~/.config/i3blocks 2>/tmp/i3blocks.err i3blocks -vvv -c ~/.config/i3blocks/config | tee /tmp/i3blocks.out
+       	# status_command goblocks
+       	status_command /home/ron/git/bumblebee-status/bumblebee-status -t firefox-dark-powerline -m layout-xkb cpu memory battery date time -p time.format="%H:%M" date.format="%a, %b %d %Y"
 }
 
 # Pulse Audio controls
@@ -196,7 +198,7 @@ bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 bindsym $mod+p exec "xrandr --output eDP1 --off && xrandr --output DP1 --auto"
-bindsym $mod+o exec "xrandr --output eDP1 --auto"
+bindsym $mod+o exec "xrandr --output eDP-1 --auto"
 bindsym Control+Print exec python /home/ron/git/linux-configuration-files/screen.py
 
 # Media player controls

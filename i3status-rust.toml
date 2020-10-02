@@ -1,0 +1,40 @@
+theme = "solarized-dark"
+icons = "awesome"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+# format_mem = "{Mup}%"
+# format_swap = "{SUp}%"
+format_mem = "{Mum}MB/{MTm}MB({Mup}%)"
+format_swap = "{SUm}MB/{STm}MB({SUp}%)"
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "net"
+device = "wlan0"
+# format = "{ssid} {signal_strength} {ip} {speed_down} {graph_down}"
+interval = 5
+use_bits = false
+
+[[block]]
+block = "keyboard_layout"
+driver = "localebus"
+interval = 1
+format = "{layout}"
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "battery"
+interval = 10
+format = "{percentage}% {time}"
+
+[[block]]
+block = "time"
+interval = 60
+format = "%a %d/%m %R"

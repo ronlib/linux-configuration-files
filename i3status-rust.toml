@@ -21,10 +21,9 @@ interval = 5
 use_bits = false
 
 [[block]]
-block = "keyboard_layout"
-driver = "localebus"
+block = "custom"
+command = 'xkb-switch'
 interval = 1
-format = "{layout}"
 
 [[block]]
 block = "sound"

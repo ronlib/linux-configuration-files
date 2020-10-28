@@ -184,7 +184,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         # font pango:DejaVu Sans, FontAwesome 9
-        font pango:Noto Sans Mono, Icons 10
+        font pango:Cousine, Icons 10
         # status_command i3blocks #-c ~/.config/i3blocks/config
         # status_command SCRIPT_DIR=~/.config/i3blocks 2>/tmp/i3blocks.err i3blocks -vvv -c ~/.config/i3blocks/config | tee /tmp/i3blocks.out
        	# status_command goblocks

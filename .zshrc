@@ -14,7 +14,8 @@ export ZSH="/home/ron/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes ZSH_THEME="powerlevel10k/powerlevel10k"
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
@@ -87,6 +88,7 @@ source /usr/share/fzf/completion.zsh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
+export GITSTATUS_LOG_LEVEL=DEBUG
 
 source /home/ron/git/enhancd/init.sh 
 source ~/.zplug/init.zsh
@@ -110,7 +112,12 @@ source ~/.zplug/init.zsh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$PATH
+alias ls=exa
 alias vi=vim
 alias gp="git pull"
 alias clip="tr --delete '\n' | xclip -sel clip"
+alias kc=kubectl
+# Python configuration
+source /home/ron/.local/bin/virtualenvwrapper.sh
+export EDITOR=vim

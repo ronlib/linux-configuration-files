@@ -6,8 +6,8 @@ block = "memory"
 display_type = "memory"
 # format_mem = "{Mup}%"
 # format_swap = "{SUp}%"
-format_mem = "{Mum}MB/{MTm}MB({Mup}%)"
-format_swap = "{SUm}MB/{STm}MB({SUp}%)"
+format_mem = "{mem_total_used}/{mem_total}({mem_total_used_percents})"
+# format_swap = "{SUm}MB/{STm}MB({SUp}%)"
 
 [[block]]
 block = "cpu"
@@ -16,17 +16,13 @@ interval = 1
 [[block]]
 block = "net"
 device = "wlan0"
-# format = "{ssid} {signal_strength} {ip} {speed_down} {graph_down}"
+format = "{ssid} {signal_strength} {ip} {speed_down} {speed_up}"
 interval = 5
-use_bits = false
 
 [[block]]
 block = "custom"
 command = 'xkb-switch'
 interval = 1
-
-[[block]]
-block = "sound"
 
 [[block]]
 block = "battery"

@@ -13,6 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
+# font pango:Ubuntu Regular 16
 font pango:Ubuntu Regular 11
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -184,7 +185,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         # font pango:DejaVu Sans, FontAwesome 9
-        font pango:Cousine, Icons 10
+        font pango:Cousine, Icons 11
         # status_command i3blocks #-c ~/.config/i3blocks/config
         # status_command SCRIPT_DIR=~/.config/i3blocks 2>/tmp/i3blocks.err i3blocks -vvv -c ~/.config/i3blocks/config | tee /tmp/i3blocks.out
        	# status_command goblocks
@@ -211,7 +212,7 @@ bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-bindsym $mod+p exec "xrandr --output eDP1 --off && xrandr --output DP1 --auto"
+bindsym $mod+p exec "xrandr --output eDP1 --off && xrandr --output DP3 --auto"
 bindsym $mod+o exec "xrandr --output eDP-1 --auto"
 bindsym Control+Print exec python /home/ron/git/linux-configuration-files/screen.py
 
@@ -226,3 +227,4 @@ for_window [class="Yad"] floating enable
 hide_edge_borders both
 
 bindsym $mod+i move workspace to output right
+exec "xrandr --dpi 96"

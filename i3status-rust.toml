@@ -14,6 +14,9 @@ block = "cpu"
 interval = 1
 
 [[block]]
+block = "sound"
+
+[[block]]
 block = "net"
 device = "wlan0"
 format = "{ssid} {signal_strength} {ip} {speed_down} {speed_up}"
@@ -32,4 +35,4 @@ format = "{percentage}% {time}"
 [[block]]
 block = "time"
 interval = 60
-format = "%a %d/%m %R"
+format = "%a %d/%m/%y %R"

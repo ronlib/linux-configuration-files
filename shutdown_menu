@@ -27,7 +27,8 @@
 #######################################################################
 
 # Use a custom lock script
-LOCKSCRIPT="i3lock-fancy -p"
+# LOCKSCRIPT="i3lock-extra -m pixelize"
+LOCKSCRIPT="i3lock-fancy -p -g"
 
 # Colors: FG (foreground), BG (background), HL (highlighted)
 FG_COLOR="${FG_COLOR:-#bbbbbb}"
@@ -37,8 +38,8 @@ HLBG_COLOR="${HLBG_COLOR:-#bbbbbb}"
 BORDER_COLOR="${BORDER_COLOR:-#222222}"
 
 # Options not related to colors
-ROFI_TEXT="${ROFI_TEXT:-Menu:}"
-ROFI_OPTIONS=(${ROFI_OPTIONS:--width 11 -location 3 -hide-scrollbar -bw 2})
+ROFI_TEXT="${ROFI_TEXT:-Menu}"
+ROFI_OPTIONS=(${ROFI_OPTIONS:--theme-str 'window {width: 11%; border: 2;} listview {scrollbar: false;}' -location 0})
 
 # Zenity options
 ZENITY_TITLE="${ZENITY_TITLE:-Menu}"
@@ -136,7 +137,7 @@ function prepare_launcher() {
   if [[ "$1" == "rofi" ]]; then
     rofi_colors=(-bc "${BORDER_COLOR}" -bg "${BG_COLOR}" -fg "${FG_COLOR}" \
         -hlfg "${HLFG_COLOR}" -hlbg "${HLBG_COLOR}")
-    launcher_exe="rofi -location 0"
+    launcher_exe="rofi"
     launcher_options=(-dmenu -i -lines "${menu_nrows}" -p "${ROFI_TEXT}" \
         "${rofi_colors[@]}" "${ROFI_OPTIONS[@]}")
   elif [[ "$1" == "zenity" ]]; then

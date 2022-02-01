@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/ron/authomize/helm-charts/secrets/env_vars_production'
+let g:netrw_dirhist_7='/home/ron/authomize/microsoft-provider'
+let g:netrw_dirhist_6='/home/ron/authomize'
+let g:netrw_dirhist_5='/home/ron/authomize/microsoft-onboarding'
+let g:netrw_dirhist_4='/home/ron/authomize'
+let g:netrw_dirhist_3='/home/ron/authomize/helm-charts/secrets/env_vars'
+let g:netrw_dirhist_2='/home/ron/authomize/plugins-service'
+let g:netrw_dirhist_1='/home/ron/authomize/email-service/config'
+let g:netrw_dirhist_0='/home/ron/.aws'
+let g:netrw_dirhist_9='/home/ron/Downloads'

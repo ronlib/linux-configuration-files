@@ -19,7 +19,8 @@ block = "sound"
 [[block]]
 block = "net"
 device = "wlan0"
-format = "{ssid} {signal_strength} {ip} {speed_down} {speed_up}"
+# format = "{$ssid} {$signal_strength} {ip} {speed_down} {speed_up}"
+format = "{ip} {ssid}{speed_down} {speed_up}"
 interval = 5
 
 [[block]]

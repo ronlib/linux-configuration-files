@@ -121,3 +121,4 @@ alias kc=kubectl
 # Python configuration
 source /home/ron/.local/bin/virtualenvwrapper.sh
 export EDITOR=vim
+complete -C '/usr/bin/aws_completer' aws

@@ -228,3 +228,4 @@ hide_edge_borders both
 
 bindsym $mod+i move workspace to output right
 exec "xrandr --dpi 96"
+exec_always xautolock -time 10 -locker "xset dpms force off" -notify 5 -notifier "i3lock-fancy -p -g"

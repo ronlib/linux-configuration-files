@@ -1,23 +1,18 @@
 map <C-t><left> :tabp<cr>
 map <C-t><right> :tabn<cr> 
+set rtp+=~/.vim/bundle/Vundle.vim
 
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
 
 " Enable type file detection. Vim will be able to try to detect the type of file in use.
-filetype on
-
-" Enable plugins and load plugin for the detected file type.
-filetype plugin on
-
-" Load an indent file for the detected file type.
-filetype indent on
+filetype off
 
 " Turn syntax highlighting on.
 syntax on
 
 " Add numbers to each line on the left-hand side.
-set number
+set rnu
 
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
@@ -80,31 +75,29 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 autocmd FileType yaml setlocal sw=2 ts=2 et
 
-" PLUGINS ---------------------------------------------------------------- {{{
 
-" Plugin code goes here.
+call vundle#begin()
 
-call plug#begin('~/.vim/plugged')
-
-
-  Plug 'dense-analysis/ale'
-
-  Plug 'preservim/nerdtree'
-
-
-call plug#end()
-
-" }}}
-
-
-" MAPPINGS --------------------------------------------------------------- {{{
-
-" Mappings code goes here.
-
-" }}}
+" alternatively, pass a path where Vundle should install plugins
+" "call vundle#begin('~/some/path/here')
+"
+" " let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+"
+" " add all your plugins here (note older versions of Vundle
+" " used Bundle instead of Plugin)
+"
+" " ...
+"
+" " All of your Plugins must be added before the following line
+call vundle#end()            " required
 
 
-" VIMSCRIPT -------------------------------------------------------------- {{{
+" enable plugins and load plugin for the detected file type.
+filetype plugin on
+
+" Load an indent file for the detected file type.
+filetype indent on
 
 " This will enable code folding.
 " Use the marker method of folding.
@@ -112,15 +105,4 @@ augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
-
-" More Vimscripts code goes here.
-
-" }}}
-
-
-" STATUS LINE ------------------------------------------------------------ {{{
-
-" Status bar code goes here.
-
-" }}}
 
